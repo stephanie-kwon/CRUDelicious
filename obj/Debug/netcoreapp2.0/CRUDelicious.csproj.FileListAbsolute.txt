@@ -1,0 +1,10 @@
+/Users/stephaniekwon/Desktop/C#/CRUDelicious/bin/Debug/netcoreapp2.0/CRUDelicious.deps.json
+/Users/stephaniekwon/Desktop/C#/CRUDelicious/bin/Debug/netcoreapp2.0/CRUDelicious.runtimeconfig.json
+/Users/stephaniekwon/Desktop/C#/CRUDelicious/bin/Debug/netcoreapp2.0/CRUDelicious.runtimeconfig.dev.json
+/Users/stephaniekwon/Desktop/C#/CRUDelicious/bin/Debug/netcoreapp2.0/CRUDelicious.dll
+/Users/stephaniekwon/Desktop/C#/CRUDelicious/bin/Debug/netcoreapp2.0/CRUDelicious.pdb
+/Users/stephaniekwon/Desktop/C#/CRUDelicious/obj/Debug/netcoreapp2.0/CRUDelicious.csproj.CoreCompileInputs.cache
+/Users/stephaniekwon/Desktop/C#/CRUDelicious/obj/Debug/netcoreapp2.0/CRUDelicious.AssemblyInfoInputs.cache
+/Users/stephaniekwon/Desktop/C#/CRUDelicious/obj/Debug/netcoreapp2.0/CRUDelicious.AssemblyInfo.cs
+/Users/stephaniekwon/Desktop/C#/CRUDelicious/obj/Debug/netcoreapp2.0/CRUDelicious.dll
+/Users/stephaniekwon/Desktop/C#/CRUDelicious/obj/Debug/netcoreapp2.0/CRUDelicious.pdb

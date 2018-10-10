@@ -1,0 +1,65 @@
+@using CRUDelicious.Models
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update Recipe</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Edit dish!</h1>
+    <a href="/"><button type="button" class="btn btn-light float-left">Home</button></a>
+
+    @model Dishes
+    <form asp-action="editrecipe" asp-controller="Home" method="POST">
+        <div class="form-group col-sm-4 mx-auto">
+            <label asp-for="Chef">Chefs Name</label>
+            <input type="text" class="form-control" asp-for="Chef" value="@ViewBag.OneDish.Chef">
+            <span asp-validation-for="Chef"></span>
+        </div>
+
+        <div class="form-group col-sm-4 mx-auto">
+            <label asp-for="Name">Name of Dish</label>
+            <input type="text" class="form-control" asp-for="Name" value="@ViewBag.OneDish.Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+
+        <div class="form-group col-sm-4 mx-auto">
+            <label asp-for="Calories"># of Calories</label>
+            <input type="text" class="form-control" asp-for="Calories" value="@ViewBag.OneDish.Calories">
+            <span asp-validation-for="Calories"></span>
+        </div>
+
+        <div class="form-group col-sm-4 mx-auto">
+            <label asp-for="Tastiness">Tastiness</label>
+            <select class="form-control" asp-for="Tastiness" aria-placeholder="@ViewBag.OneDish.Tastiness">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+            <span asp-validation-for="Tastiness"></span>
+        </div>
+        <div class="form-group col-sm-4 mx-auto">
+            <label asp-for="Description">Description</label>
+            <textarea class="form-control" asp-for="Description" rows="3" value="@ViewBag.OneDish.Description"></textarea>
+            <span asp-validation-for="Description"></span>
+            <br>
+            <button type="submit" class="btn btn-primary float-right btn-sm">Update dish!</button>
+        </div>
+
+    </form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
