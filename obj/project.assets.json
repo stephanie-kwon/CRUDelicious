@@ -12753,11 +12753,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/stephaniekwon/Desktop/C#/CRUDelicious/CRUDelicious.csproj",
+      "projectUniqueName": "/Users/stephaniekwon/Desktop/CodingDojo/C#/CRUDelicious/CRUDelicious.csproj",
       "projectName": "CRUDelicious",
-      "projectPath": "/Users/stephaniekwon/Desktop/C#/CRUDelicious/CRUDelicious.csproj",
+      "projectPath": "/Users/stephaniekwon/Desktop/CodingDojo/C#/CRUDelicious/CRUDelicious.csproj",
       "packagesPath": "/Users/stephaniekwon/.nuget/packages/",
-      "outputPath": "/Users/stephaniekwon/Desktop/C#/CRUDelicious/obj/",
+      "outputPath": "/Users/stephaniekwon/Desktop/CodingDojo/C#/CRUDelicious/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

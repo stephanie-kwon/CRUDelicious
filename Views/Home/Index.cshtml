@@ -3,49 +3,62 @@
 <head>
 	<title>HomePage</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css"/>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <style>
-        h1 {
-            text-align: center;
-            margin-top: 35px;
-        }
-
-        h3 {
-            margin-bottom: 50px;
-        }
-        h6 {
-            margin-left: 40px;
-        }
-
-        .recipes {
-            height: 400px;
-            width: 400px;
-
-            margin-top: 60px;
-            
-        }
-    </style>
 </head>
+
 <body>
 <div class="container">
-    <h1>Welcome to CRUDelicious</h1>
-    
+    <h1>Welcome to CRUD cook</h1>
+    <a href="newrecipe" class="newRecipe">Add a dish</a>
 
-    <a href="newrecipe"><button type="button" class="btn btn-light float-right">Add a dish!</button></a>
+    <img src="/images/knifebackground.jpeg" class="banner mx-auto">
 
-    <div class="recipes">
-        <h3>Check out some recent dishes!</h3>
+    <!-- <a href="newrecipe"><button type="button" class="btn btn-light float-right">Add a dish!</button></a> -->
 
-        @for (int i = @ViewBag.AllRecipes.Count-1; i >= 0; i--)
-        {
-            <h6> <a href="@ViewBag.AllRecipes[i].id">@ViewBag.AllRecipes[i].Name</a> by @ViewBag.AllRecipes[i].Chef</h6>
-            <br>
-        }
+    <div class="intro">
+        <div id="welcome">
+            <img src="/images/chef.jpeg" class="welcomeImg"> 
+            <p class="welcomeP">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam justo velit, 
+                posuere quis commodo at, ultrices id sem. In imperdiet accumsan ante, at rutrum 
+                nisi egestas at. Donec vel finibus ante. Nam scelerisque quam in purus scelerisque 
+                lacinia. Maecenas rhoncus massa a sem sollicitudin vulputate ac in lacus. 
+                Vestibulum non.
+            </p>
+           
+        </div>
+        <div id="new">
+            <img src="/images/veggies.jpeg" class="welcomeImg"> 
+            <p class="welcomeP">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam justo velit, 
+                posuere quis commodo at, ultrices id sem. In imperdiet accumsan ante, at rutrum 
+                nisi egestas at. Donec vel finibus ante. Nam scelerisque quam in purus scelerisque 
+                lacinia. Maecenas rhoncus massa a sem sollicitudin vulputate ac in lacus. 
+                Vestibulum non.
+            </p>
+        </div>
     </div>
 
 
+    <div class="recipes">
+        <div class="recipeImg">
+            <img src="/images/food.jpeg" class="foodImg">
+        </div>
 
+        <div class="allRecipes">
+            <p class="allRecipesP">Check out some recent dishes!</p>
+
+            @for (int i = @ViewBag.AllRecipes.Count-1; i >= 0; i--)
+            {
+                <h6> <a href="@ViewBag.AllRecipes[i].id">@ViewBag.AllRecipes[i].Name</a> by @ViewBag.AllRecipes[i].Chef</h6>
+                <br>
+            }
+        </div>
+
+    </div>
 
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

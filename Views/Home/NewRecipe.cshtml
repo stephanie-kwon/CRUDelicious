@@ -4,58 +4,76 @@
 <html>
 <head>
 	<title>New Recipe</title>
-
+    <link rel="stylesheet" href="~/css/style.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <style>
+    <!-- <style>
         h1 {
             text-align: center;
             margin-bottom: 15px;
         }
-    </style>
+    </style> -->
 </head>
 <body>
-    <h1> Add a new Dish!</h1>
+    <div class="newDish" >
 
-    @model Dishes
-    <form asp-action="addnew" asp-controller="Home" method="POST">
-        <div class="form-group col-sm-4 mx-auto">
-            <label asp-for="Chef">Chefs Name</label>
-            <input type="text" class="form-control" asp-for="Chef">
-            <span asp-validation-for="Chef"></span>
+        <div class="addDish">
+            <p class="headerInNew">Add a new dish!</p>
+
+            @model Dishes
+            <form asp-action="addnew" asp-controller="Home" method="POST" class="recipeForm">
+                <div class="form-group col-sm-10">
+                    <label asp-for="Chef">Chefs Name</label>
+                    <input type="text" class="form-control" asp-for="Chef">
+                    <span asp-validation-for="Chef"></span>
+                </div>
+
+                <div class="form-group col-sm-10">
+                    <label asp-for="Name">Name of Dish</label>
+                    <input type="text" class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name"></span>
+                </div>
+
+                <div class="form-group col-sm-10">
+                    <label asp-for="Calories"># of Calories</label>
+                    <input type="text" class="form-control" asp-for="Calories">
+                    <span asp-validation-for="Calories"></span>
+                </div>
+                <div class="form-group col-sm-10">
+                    <label asp-for="Tastiness">Tastiness</label>
+                    <select class="form-control" asp-for="Tastiness">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                    <span asp-validation-for="Tastiness"></span>
+                </div>
+                <div class="form-group col-sm-10">
+                    <label asp-for="Description">Description</label>
+                    <textarea class="form-control" asp-for="Description" rows="3"></textarea>
+                    <span asp-validation-for="Description"></span>
+                    <br>
+                    <button type="submit" class="btn float-right btn-sm">Add dish!</button>
+                </div>
+            </form>
         </div>
 
-        <div class="form-group col-sm-4 mx-auto">
-            <label asp-for="Name">Name of Dish</label>
-            <input type="text" class="form-control" asp-for="Name">
-            <span asp-validation-for="Name"></span>
+        <div class="addDishImg">
+            <img src="/images/greenplants.jpeg" class="DishImg">
         </div>
 
-        <div class="form-group col-sm-4 mx-auto">
-            <label asp-for="Calories"># of Calories</label>
-            <input type="text" class="form-control" asp-for="Calories">
-            <span asp-validation-for="Calories"></span>
-        </div>
-        <div class="form-group col-sm-4 mx-auto">
-            <label asp-for="Tastiness">Tastiness</label>
-            <select class="form-control" asp-for="Tastiness">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            </select>
-            <span asp-validation-for="Tastiness"></span>
-        </div>
-        <div class="form-group col-sm-4 mx-auto">
-            <label asp-for="Description">Description</label>
-            <textarea class="form-control" asp-for="Description" rows="3"></textarea>
-            <span asp-validation-for="Description"></span>
-            <br>
-            <button type="submit" class="btn btn-primary float-right btn-sm">Add dish!</button>
-        </div>
 
-    </form>
+
+
+
+
+
+
+
+    </div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
